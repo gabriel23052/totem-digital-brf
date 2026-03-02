@@ -1,0 +1,20 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: url("../../img/onda.svg") no-repeat bottom;
+  position: relative;
+}
+
+.footer-brfLogo {
+  padding: 0 60px 60px 0;
+}
+
+.footer-sigmaLogo {
+  width: 283px;
+  height: 31px;
+  position: absolute;
+  left: 152px;
+  bottom: 8px;
+}

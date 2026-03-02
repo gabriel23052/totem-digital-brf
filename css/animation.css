@@ -1,0 +1,23 @@
+@keyframes fadeOff {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+.animation-fadeOff {
+  animation: fadeOff 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.animation-fadeIn {
+  animation: fadeIn 0.3s forwards;
+}

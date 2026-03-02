@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>BRF | Painel de Vídeos</title>
+    <link rel="stylesheet" href="style.min.css">
+  </head>
+  <body>
+    <div class="video j-videoContainer">
+      <button class="t-xs w j-backButton">Menu</button>
+      <video class="j-video" src="video.mp4" preload="auto" disablePictureInPicture></video>
+    </div>
+    <div class="panel j-mainContainer active">
+      <h1 class="title c1 t-xxl">Processos do Frigorífico de Aves</h1>
+      <main class="app">
+        <button class="app-button w t-xl j-clipButton" clip-index='0'>Assista o vídeo completo</button>
+        <div class="app-decorator"></div>
+        <div class="videoList">
+          <h2 class="c4 t-m">Clique e assista individualmente cada processo</h2>
+          <ul>
+            <li>
+              <button class="j-clipButton" clip-index='1'>
+                <span class="w t-s">Galpão de espera</span>
+                <div class="w t-l">1</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='7'>
+                <span class="w t-s">Embalagem Inicial</span>
+                <div class="w t-l">7</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='2'>
+                <span class="w t-s">Pendura</span>
+                <div class="w t-l">2</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='8'>
+                <span class="w t-s">Sala de Cortes</span>
+                <div class="w t-l">8</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='3'>
+                <span class="w t-s">Sangria</span>
+                <div class="w t-l">3</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='9'>
+                <span class="w t-s">Túnel de Congelamento</span>
+                <div class="w t-l">9</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='4'>
+                <span class="w t-s">Depenagem</span>
+                <div class="w t-l">4</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='10'>
+                <span class="w t-s">Embalagem Final</span>
+                <div class="w t-l">10</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='5'>
+                <span class="w t-s">Evisceração</span>
+                <div class="w t-l">5</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='11'>
+                <span class="w t-s">Expedição</span>
+                <div class="w t-l">11</div>
+              </button>
+            </li>
+            <li>
+              <button class="j-clipButton" clip-index='6'>
+                <span class="w t-s">Chiller de Resfriamento</span>
+                <div class="w t-l">6</div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">
+        <img class="footer-sigmaLogo" src="img/logo_sigma.png" alt="Logo" width="264" height="124">
+        <img class="footer-brfLogo" src="img/logo.svg" alt="Logo" width="264" height="124">
+      </footer>
+    </div>
+    <script src="js/clips.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

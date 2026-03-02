@@ -1,0 +1,24 @@
+.app {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  box-sizing: border-box;
+}
+
+.app-button {
+  width: 100%;
+  max-width: 600px;
+  padding: 44px 0px;
+  background: var(--c3);
+  border-radius: 32px;
+}
+
+.app-decorator {
+  width: 6px;
+  align-self: stretch;
+  background: var(--c2);
+  border-radius: 4px;
+}
