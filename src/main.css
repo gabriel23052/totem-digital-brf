@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Co Headline Corp";
+  src: url("/fonts/Co Headline Corp Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Co Headline Corp";
+  src: url("/fonts/Co Headline Corp Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* CSS Reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+
+/* Tokens */
+:root {
+  --brf-red1: #da2228;
+  --brf-red2: #cc2525;
+  --brf-orange: #e67226;
+  --dark: #404040;
+  --light: #ffffff;
+}
+
+.brf-red1-tx {
+  color: var(--brf-red1);
+}
+.brf-red1-bg {
+  background-color: var(--brf-red1);
+}
+.brf-red2-tx {
+  color: var(--brf-red2);
+}
+.brf-red2-bg {
+  background-color: var(--brf-red2);
+}
+.brf-orange-tx {
+  color: var(--brf-orange);
+}
+.brf-orange-bg {
+  background-color: var(--brf-orange);
+}
+.dark-tx {
+  color: var(--dark);
+}
+.dark-bg {
+  background-color: var(--dark);
+}
+.light-tx {
+  color: var(--light);
+}
+.light-bg {
+  background-color: var(--light);
+}
+
+.t-title {
+  font:
+    700 4.5rem/1.13 "Co Headline Corp",
+    sans-serif;
+}
+.t-fullVideoButtonLabel {
+  font:
+    700 3rem/1.05 "Co Headline Corp",
+    sans-serif;
+}
+.t-number {
+  font:
+    700 4rem/1 "Co Headline Corp",
+    sans-serif;
+}
+.t-secondaryTitle {
+  font:
+    400 2.25rem/1.11 "Co Headline Corp",
+    sans-serif;
+}
+.t-label {
+  font:
+    400 1.75rem/1.14 "Co Headline Corp",
+    sans-serif;
+}
+.t-backButtonLabel {
+  font:
+    400 1.25rem/1 "Co Headline Corp",
+    sans-serif;
+}

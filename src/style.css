@@ -1,0 +1,163 @@
+html {
+  font-size: clamp(12.5px, 0.833vw, 16px);
+}
+
+body {
+  background-image: url("/img/background_wave.svg"), url("/img/logo.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 15rem;
+  background-position:
+    bottom,
+    right 1rem bottom 3rem;
+}
+
+.video {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+.video.active {
+  display: block;
+}
+
+.video button {
+  aspect-ratio: 1/1;
+  display: flex;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.video svg {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mainScreen {
+  height: max(100%, 720px);
+  display: none;
+  grid-template-rows: 3.5rem auto 5rem;
+  align-items: center;
+  gap: 5rem;
+  margin-top: auto;
+  padding-top: 3rem;
+  position: relative;
+}
+.mainScreen.active {
+  display: grid;
+}
+
+.title {
+  text-align: center;
+}
+
+.timestampSelection {
+  width: min(100%, 1920px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-inline: auto;
+  padding-inline: 4rem;
+}
+
+.timestampSelection-button {
+  width: 30rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.timestampSelection-decorator {
+  width: 0.25rem;
+  align-self: stretch;
+  border-radius: 4px;
+}
+
+.timestamps {
+  padding-block: 1rem;
+}
+
+.timestamps h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.timestamps ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2.5rem;
+}
+
+.timestamps button {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+.timestamps div {
+  width: 4.75rem;
+  height: 4.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1;
+  grid-column: 1;
+  border-radius: 50%;
+}
+.timestamps li:nth-child(10) div {
+  font:
+    700 3.25rem/1 "Co Headline Corp",
+    sans-serif;
+}
+.timestamps li:nth-child(11) div {
+  font:
+    700 3.25rem/1 "Co Headline Corp",
+    sans-serif;
+}
+
+.timestamps span {
+  width: 100%;
+  display: block;
+  grid-row: 1;
+  grid-column: 1;
+  padding: 0.5rem 1rem 0.5rem 5.75rem;
+  border-radius: 2rem;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.animation-fadeIn {
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeOff {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+.animation-fadeOff {
+  animation: fadeOff 0.5s forwards;
+}

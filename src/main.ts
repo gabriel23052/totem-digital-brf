@@ -1,4 +1,5 @@
-import "./css/style.css";
+import "./style.css";
+import "./main.css";
 
 const clips = [
   {start: 10, end: 20},

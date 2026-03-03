@@ -11,102 +11,107 @@
 
 <body>
   <!-- VIDEO -->
-  <div class="video j-videoContainer">
-    <button class="t-xs w j-backButton">Menu</button>
+  <div class="video light-bg j-videoContainer">
+    <button class="t-backButtonLabel brf-red1-bg j-backButton">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" fill="none" viewBox="0 0 30 29">
+        <path fill="var(--light)" d="M.586 4.233a2 2 0 0 1-.003-2.826L1.4.588a2 2 0 0 1 2.832 0L28.4 24.802a2 2 0 0 1-.016 2.841l-.797.78a2 2 0 0 1-2.814-.013z" />
+        <path fill="var(--light)" d="M28.433 4.233a2 2 0 0 0 .003-2.826L27.62.588a2 2 0 0 0-2.833 0L.62 24.802a2 2 0 0 0 .016 2.841l.797.78a2 2 0 0 0 2.813-.013z" />
+      </svg>
+    </button>
     <video class="j-video" src="video.mp4" preload="auto" disablePictureInPicture></video>
   </div>
 
-  <!-- PANEL -->
-  <div class="panel j-mainContainer active">
+  <!-- MAINSCREEN -->
+  <main class="mainScreen j-mainContainer active">
 
     <!-- TITLE -->
-    <h1 class="title c1 t-xxl">Processos do Frigorífico de Aves</h1>
+    <h1 class="title brf-red1-tx t-title">Processos do Frigorífico de Aves</h1>
 
     <!-- APP -->
-    <main class="app">
-      <button class="app-button w t-xl j-clipButton" clip-index='0'>Assista o vídeo completo</button>
-      <div class="app-decorator"></div>
+    <section class="timestampSelection">
+      <button class="timestampSelection-button light-tx brf-orange-bg t-fullVideoButtonLabel j-clipButton" clip-index='0'>Assista o vídeo completo</button>
+      <div class="timestampSelection-decorator brf-red2-bg"></div>
 
       <!-- VIDEO LIST -->
-      <div class="videoList">
-        <h2 class="c4 t-m">Clique e assista individualmente cada processo</h2>
+      <div class="timestamps">
+        <h2 class="dark-tx t-secondaryTitle">Clique e assista individualmente cada processo</h2>
+        
         <ul>
           <li>
             <button class="j-clipButton" clip-index='1'>
-              <span class="w t-s">Galpão de espera</span>
-              <div class="w t-l">1</div>
-            </button>
-          </li>
-          <li>
-            <button class="j-clipButton" clip-index='7'>
-              <span class="w t-s">Embalagem Inicial</span>
-              <div class="w t-l">7</div>
+              <span class="light-tx brf-orange-bg t-label">Galpão de espera</span>
+              <div class="light-tx brf-red2-bg t-number">1</div>
             </button>
           </li>
           <li>
             <button class="j-clipButton" clip-index='2'>
-              <span class="w t-s">Pendura</span>
-              <div class="w t-l">2</div>
-            </button>
-          </li>
-          <li>
-            <button class="j-clipButton" clip-index='8'>
-              <span class="w t-s">Sala de Cortes</span>
-              <div class="w t-l">8</div>
+              <span class="light-tx brf-orange-bg t-label">Pendura</span>
+              <div class="light-tx brf-red2-bg t-number">2</div>
             </button>
           </li>
           <li>
             <button class="j-clipButton" clip-index='3'>
-              <span class="w t-s">Sangria</span>
-              <div class="w t-l">3</div>
-            </button>
-          </li>
-          <li>
-            <button class="j-clipButton" clip-index='9'>
-              <span class="w t-s">Túnel de Congelamento</span>
-              <div class="w t-l">9</div>
+              <span class="light-tx brf-orange-bg t-label">Sangria</span>
+              <div class="light-tx brf-red2-bg t-number">3</div>
             </button>
           </li>
           <li>
             <button class="j-clipButton" clip-index='4'>
-              <span class="w t-s">Depenagem</span>
-              <div class="w t-l">4</div>
-            </button>
-          </li>
-          <li>
-            <button class="j-clipButton" clip-index='10'>
-              <span class="w t-s">Embalagem Final</span>
-              <div class="w t-l">10</div>
+              <span class="light-tx brf-orange-bg t-label">Depenagem</span>
+              <div class="light-tx brf-red2-bg t-number">4</div>
             </button>
           </li>
           <li>
             <button class="j-clipButton" clip-index='5'>
-              <span class="w t-s">Evisceração</span>
-              <div class="w t-l">5</div>
-            </button>
-          </li>
-          <li>
-            <button class="j-clipButton" clip-index='11'>
-              <span class="w t-s">Expedição</span>
-              <div class="w t-l">11</div>
+              <span class="light-tx brf-orange-bg t-label">Evisceração</span>
+              <div class="light-tx brf-red2-bg t-number">5</div>
             </button>
           </li>
           <li>
             <button class="j-clipButton" clip-index='6'>
-              <span class="w t-s">Chiller de Resfriamento</span>
-              <div class="w t-l">6</div>
+              <span class="light-tx brf-orange-bg t-label">Chiller de Resfriamento</span>
+              <div class="light-tx brf-red2-bg t-number">6</div>
             </button>
           </li>
+          <li>
+            <button class="j-clipButton" clip-index='7'>
+              <span class="light-tx brf-orange-bg t-label">Embalagem Inicial</span>
+              <div class="light-tx brf-red2-bg t-number">7</div>
+            </button>
+          </li>
+          <li>
+            <button class="j-clipButton" clip-index='8'>
+              <span class="light-tx brf-orange-bg t-label">Sala de Cortes</span>
+              <div class="light-tx brf-red2-bg t-number">8</div>
+            </button>
+          </li>
+
+          <li>
+            <button class="j-clipButton" clip-index='9'>
+              <span class="light-tx brf-orange-bg t-label">Túnel de Congelamento</span>
+              <div class="light-tx brf-red2-bg t-number">9</div>
+            </button>
+          </li>
+
+          <li>
+            <button class="j-clipButton" clip-index='10'>
+              <span class="light-tx brf-orange-bg t-label">Embalagem Final</span>
+              <div class="light-tx brf-red2-bg t-number">10</div>
+            </button>
+          </li>
+
+          <li>
+            <button class="j-clipButton" clip-index='11'>
+              <span class="light-tx brf-orange-bg t-label">Expedição</span>
+              <div class="light-tx brf-red2-bg t-number">11</div>
+            </button>
+          </li>
+
         </ul>
       </div>
-    </main>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <img class="footer-sigmaLogo" src="img/logo_sigma.png" width="264" height="124">
-      <img class="footer-brfLogo" src="img/logo.svg" width="264" height="124">
-    </footer>
-  </div>
+  </main>
 
   <script src="src/main.ts" type="module"></script>
 </body>
