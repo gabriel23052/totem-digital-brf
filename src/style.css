@@ -14,12 +14,16 @@ body {
 .video {
   width: 100vw;
   height: 100vh;
-  display: none;
+  display: block;
   position: absolute;
   inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
 }
-.video.active {
-  display: block;
+.video[data-show="true"] {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .video button {
@@ -30,6 +34,7 @@ body {
   position: absolute;
   top: 2rem;
   right: 2rem;
+  z-index: 2;
 }
 
 .video svg {
@@ -45,16 +50,13 @@ body {
 
 .mainScreen {
   height: max(100%, 720px);
-  display: none;
+  display: grid;
   grid-template-rows: 3.5rem auto 5rem;
   align-items: center;
   gap: 5rem;
   margin-top: auto;
   padding-top: 3rem;
   position: relative;
-}
-.mainScreen.active {
-  display: grid;
 }
 
 .title {
@@ -138,26 +140,8 @@ body {
   text-align: left;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-.animation-fadeIn {
-  animation: fadeIn 0.3s forwards;
-}
-
-@keyframes fadeOff {
-  from {
-    opacity: 100%;
-  }
-  to {
-    opacity: 0%;
-  }
-}
-.animation-fadeOff {
-  animation: fadeOff 0.5s forwards;
+::view-transition-new(root),
+::view-transition-old(root) {
+  animation-duration: 300ms;
+  animation-fill-mode: linear;
 }
