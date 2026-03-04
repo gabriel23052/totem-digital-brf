@@ -91,23 +91,16 @@ export default class TotemHandler {
    */
   private startClip() {
     if (this.metadataLoaded === false) return;
-    const show = () => {
-      if (this.currentClip) {
-        this.video.currentTime = this.currentClip.start;
-        this.clipTitle.innerText = this.currentClip.name;
-        this.clipTitle.dataset.show = "true";
-      } else {
-        this.video.currentTime = 0;
-      }
-      this.videoContainer.dataset.show = "true";
-      this.startTimeTracker();
-      this.video.play();
-    };
-    if (!document.startViewTransition) {
-      show();
-      return;
+    if (this.currentClip) {
+      this.video.currentTime = this.currentClip.start;
+      this.clipTitle.innerText = this.currentClip.name;
+      this.clipTitle.dataset.show = "true";
+    } else {
+      this.video.currentTime = 0;
     }
-    document.startViewTransition(show);
+    this.videoContainer.dataset.show = "true";
+    this.startTimeTracker();
+    this.video.play();
   }
 
   /**
@@ -115,17 +108,10 @@ export default class TotemHandler {
    */
   private stopClip() {
     this.stopTimeTracker();
-    const hide = () => {
-      this.clipTitle.dataset.show = "false";
-      this.videoContainer.dataset.show = "false";
-      this.video.pause();
-      this.video.currentTime = 0;
-    };
-    if (!document.startViewTransition) {
-      hide();
-      return;
-    }
-    document.startViewTransition(hide);
+    this.clipTitle.dataset.show = "false";
+    this.videoContainer.dataset.show = "false";
+    this.video.pause();
+    this.video.currentTime = 0;
   }
 
   /**

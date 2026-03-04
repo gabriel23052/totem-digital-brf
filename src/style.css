@@ -57,6 +57,7 @@ body {
   opacity: 0;
   pointer-events: none;
   z-index: 1;
+  transition: opacity 500ms;
 }
 .video[data-show="true"] {
   opacity: 1;
@@ -217,12 +218,6 @@ body {
   padding: 0.5rem 1rem 0.5rem 5.75rem;
   border-radius: 2rem;
   text-align: left;
-}
-
-::view-transition-new(root),
-::view-transition-old(root) {
-  animation-duration: 500ms;
-  animation-fill-mode: linear;
 }
 
 @keyframes rotate {
