@@ -19,6 +19,8 @@ export default class TotemHandler {
   private timestampList = getDomElement<HTMLUListElement>("timestampList");
   /** Tela de loading */
   private loading = getDomElement<HTMLDivElement>("loading");
+  /** Título do clipe */
+  private clipTitle = getDomElement<HTMLHeadingElement>("clipTitle");
 
   /** Array de clipes que serão exibidos */
   private clips: TClip[];
@@ -87,8 +89,13 @@ export default class TotemHandler {
   private startClip() {
     if(this.metadataLoaded === false) return;
     const show = () => {
-      this.video.currentTime =
-        this.currentClip !== null ? this.currentClip.start : 0;
+      if(this.currentClip) {
+        this.video.currentTime = this.currentClip.start;
+        this.clipTitle.innerText = this.currentClip.name;
+        this.clipTitle.dataset.show = "true";
+      } else {
+        this.video.currentTime = 0;
+      }
       this.videoContainer.dataset.show = "true";
       this.startTimeTracker();
       this.video.play();
@@ -106,6 +113,7 @@ export default class TotemHandler {
   private stopClip() {
     this.stopTimeTracker();
     const hide = () => {
+      this.clipTitle.dataset.show = "false";
       this.videoContainer.dataset.show = "false";
       this.video.pause();
       this.video.currentTime = 0;
