@@ -207,16 +207,6 @@ body {
   grid-column: 1;
   border-radius: 50%;
 }
-.timestamps li:nth-child(10) div {
-  font:
-    700 3.25rem/1 "Co Headline Corp",
-    sans-serif;
-}
-.timestamps li:nth-child(11) div {
-  font:
-    700 3.25rem/1 "Co Headline Corp",
-    sans-serif;
-}
 
 .timestamps span {
   width: 100%;
@@ -230,7 +220,7 @@ body {
 
 ::view-transition-new(root),
 ::view-transition-old(root) {
-  animation-duration: 300ms;
+  animation-duration: 500ms;
   animation-fill-mode: linear;
 }
 
