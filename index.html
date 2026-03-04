@@ -12,21 +12,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Totem BRF" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-  <title>BRF | Painel de Vídeos</title>
+  <title>Totem Digital BRF</title>
 </head>
 
 <body>
-  <!-- ADVICE -->
   <dialog class="advice" id="advice" closedby="any" data-selector="advice">
     <h2 class="t-adviceTitle">Importante</h2>
     <p class="t-adviceParagraph">
-      Página utilizada em totens digitais interativos da BRF na feira Expovizinhos 2023
-      em Dois Vizinhos - PR, a interface é projetada para monitores touchscreen com resoluções HD, HD+ e FullHD em tela cheia, podendo apresentar problemas no layout em resoluções menores.
+      Página utilizada em totens digitais interativos da BRF na feira Expovizinhos 2023 em Dois Vizinhos - PR, a interface é projetada para monitores touchscreen com resoluções HD, HD+ e FullHD em tela cheia, podendo apresentar problemas no layout em resoluções menores.
     </p>
     <button class="dark-bg light-tx t-adviceTitle" commandfor="advice" command="close">OK</button>
   </dialog>
-
-  <!-- VIDEO -->
   <div class="video light-bg" data-selector="videoContainer">
     <h2 class="video-clipTitle t-label brf-orange-bg light-tx" data-selector="clipTitle" data-show="false"></h2>
     <div class="video-loading" data-selector="loading"></div>
@@ -41,28 +37,18 @@
     </button>
     <video src="/video.mp4" preload="metadata" disablePictureInPicture data-selector="video"></video>
   </div>
-
-  <!-- MAINSCREEN -->
   <main class="mainScreen active">
-
-    <!-- TITLE -->
     <h1 class="title brf-red1-tx t-title">Processos do Frigorífico de Aves</h1>
-
-    <!-- APP -->
     <section class="timestampSelection">
       <button class="timestampSelection-button light-tx brf-orange-bg t-fullVideoButtonLabel" data-selector="seeAllVideoBtn">Assista o vídeo completo</button>
       <div class="timestampSelection-decorator brf-red2-bg"></div>
-
-      <!-- VIDEO LIST -->
       <div class="timestamps">
         <h2 class="dark-tx t-secondaryTitle">Clique e assista individualmente cada processo</h2>
         <ul data-selector="timestampList">
         </ul>
       </div>
     </section>
-
   </main>
-
   <script src="src/main.ts" type="module"></script>
 </body>
 
