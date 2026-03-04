@@ -2,8 +2,8 @@ import getDomElement from "./utils/getDomElement";
 
 /**
  * Classe responsável por todo o funcionamento
- * do totem: Armazena as referências do DOM, 
- * inicia e finaliza os clipes, além de controlar 
+ * do totem: Armazena as referências do DOM,
+ * inicia e finaliza os clipes, além de controlar
  * a exibição do vídeo no DOM
  */
 export default class TotemHandler {
@@ -17,6 +17,8 @@ export default class TotemHandler {
   private seeAllVideoBtn = getDomElement<HTMLButtonElement>("seeAllVideoBtn");
   /** Lista dos atalhos para os clipes */
   private timestampList = getDomElement<HTMLUListElement>("timestampList");
+  /** Tela de loading */
+  private loading = getDomElement<HTMLDivElement>("loading");
 
   /** Array de clipes que serão exibidos */
   private clips: TClip[];
@@ -24,6 +26,8 @@ export default class TotemHandler {
   private currentClip: TClip | null = null;
   /** ID do intervalo que verifica se o clipe terminou */
   private timeTrackerIntervalId: number | null = null;
+  /** Estado do carregamento dos metadados do vídeo */
+  private metadataLoaded = false;
 
   /** Intervalo em milissegundos que verifica se o clipe terminou */
   private TIME_TRACKER_INTERVAL = 500;
@@ -41,6 +45,15 @@ export default class TotemHandler {
       this.startClip();
     });
     this.closeVideoBtn.addEventListener("click", this.stopClip.bind(this));
+    this.video.addEventListener("loadedmetadata", () => {
+      this.metadataLoaded = true;
+    })
+    this.video.addEventListener("waiting", () => {
+      this.loading.dataset.show = "true";
+    });
+    this.video.addEventListener("canplay", () => {
+      this.loading.dataset.show = "false";
+    });
     this.video.addEventListener("ended", this.stopClip.bind(this));
   }
 
@@ -72,6 +85,7 @@ export default class TotemHandler {
    * Exibe o clipe na interface e inicia a execução
    */
   private startClip() {
+    if(this.metadataLoaded === false) return;
     const show = () => {
       this.video.currentTime =
         this.currentClip !== null ? this.currentClip.start : 0;

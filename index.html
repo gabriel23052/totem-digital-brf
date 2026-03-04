@@ -12,13 +12,14 @@
 <body>
   <!-- VIDEO -->
   <div class="video light-bg" data-selector="videoContainer">
+    <div class="video-loading" data-selector="loading"></div>
     <button class="t-backButtonLabel brf-red1-bg" data-selector="closeVideoBtn">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" fill="none" viewBox="0 0 30 29">
         <path fill="var(--light)" d="M.586 4.233a2 2 0 0 1-.003-2.826L1.4.588a2 2 0 0 1 2.832 0L28.4 24.802a2 2 0 0 1-.016 2.841l-.797.78a2 2 0 0 1-2.814-.013z" />
         <path fill="var(--light)" d="M28.433 4.233a2 2 0 0 0 .003-2.826L27.62.588a2 2 0 0 0-2.833 0L.62 24.802a2 2 0 0 0 .016 2.841l.797.78a2 2 0 0 0 2.813-.013z" />
       </svg>
     </button>
-    <video src="/video.mp4" preload="auto" disablePictureInPicture data-selector="video"></video>
+    <video src="/video.mp4" preload="metadata" disablePictureInPicture data-selector="video"></video>
   </div>
 
   <!-- MAINSCREEN -->
