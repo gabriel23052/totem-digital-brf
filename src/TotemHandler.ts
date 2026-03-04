@@ -7,6 +7,8 @@ import getDomElement from "./utils/getDomElement";
  * a exibição do vídeo no DOM
  */
 export default class TotemHandler {
+  /** Aviso de ambiente */
+  private advice = getDomElement<HTMLDialogElement>("advice");
   /** Container do vídeo */
   private videoContainer = getDomElement<HTMLDivElement>("videoContainer");
   /** Tag do vídeo */
@@ -49,7 +51,7 @@ export default class TotemHandler {
     this.closeVideoBtn.addEventListener("click", this.stopClip.bind(this));
     this.video.addEventListener("loadedmetadata", () => {
       this.metadataLoaded = true;
-    })
+    });
     this.video.addEventListener("waiting", () => {
       this.loading.dataset.show = "true";
     });
@@ -57,6 +59,7 @@ export default class TotemHandler {
       this.loading.dataset.show = "false";
     });
     this.video.addEventListener("ended", this.stopClip.bind(this));
+    this.advice.showModal();
   }
 
   /**
@@ -87,9 +90,9 @@ export default class TotemHandler {
    * Exibe o clipe na interface e inicia a execução
    */
   private startClip() {
-    if(this.metadataLoaded === false) return;
+    if (this.metadataLoaded === false) return;
     const show = () => {
-      if(this.currentClip) {
+      if (this.currentClip) {
         this.video.currentTime = this.currentClip.start;
         this.clipTitle.innerText = this.currentClip.name;
         this.clipTitle.dataset.show = "true";

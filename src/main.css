@@ -1,4 +1,10 @@
 @font-face {
+  font-family: "Noto Sans";
+  src: url("/fonts/NotoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: "Co Headline Corp";
   src: url("/fonts/Co Headline Corp Regular.ttf") format("truetype");
   font-weight: 400;
@@ -34,7 +40,6 @@ button {
   outline: none;
   background: none;
 }
-
 
 /* Tokens */
 :root {
@@ -76,6 +81,16 @@ button {
   background-color: var(--light);
 }
 
+.t-adviceTitle {
+  font:
+    400 1.5rem/1.13 "Noto Sans",
+    sans-serif;
+}
+.t-adviceParagraph {
+  font:
+    400 1rem/1.4 "Noto Sans",
+    sans-serif;
+}
 .t-title {
   font:
     700 4.5rem/1.13 "Co Headline Corp",

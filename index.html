@@ -10,10 +10,22 @@
 </head>
 
 <body>
+  <!-- ADVICE -->
+  <dialog class="advice" id="advice" closedby="any" data-selector="advice">
+    <h2 class="t-adviceTitle">Importante</h2>
+    <p class="t-adviceParagraph">
+      Página destinada a totem de exposição com monitor touchscreen de resolução HD, HD+ ou FullHD, o layout da página pode quebrar em outros cenários.
+    </p>
+    <button class="dark-bg light-tx t-adviceTitle" commandfor="advice" command="close">OK</button>
+  </dialog>
+
   <!-- VIDEO -->
   <div class="video light-bg" data-selector="videoContainer">
     <h2 class="video-clipTitle t-label brf-orange-bg light-tx" data-selector="clipTitle" data-show="false"></h2>
     <div class="video-loading" data-selector="loading"></div>
+    <p class="video-advice light-bg dark-tx t-adviceParagraph">
+      O vídeo original dos processos infelizmente não está mais disponível, este é um substituto, a duração dos clipes também foi reduzida
+    </p>
     <button class="t-backButtonLabel brf-red1-bg" data-selector="closeVideoBtn">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" fill="none" viewBox="0 0 30 29">
         <path fill="var(--light)" d="M.586 4.233a2 2 0 0 1-.003-2.826L1.4.588a2 2 0 0 1 2.832 0L28.4 24.802a2 2 0 0 1-.016 2.841l-.797.78a2 2 0 0 1-2.814-.013z" />
