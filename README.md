@@ -34,13 +34,13 @@ A aplicação conta com uma interface de seleção para escolher qual parte do p
 
 ### Fluxo
 
-1. **Escolha da seção**
+1. **Escolha da seção**  
    O usuário toca na seção desejada.
-2. **Exibição do vídeo**
+2. **Exibição do vídeo**  
    A aplicação posiciona o vídeo no início do clipe selecionado.
-3. **Reprodução**
+3. **Reprodução**  
    A aplicação reproduz o vídeo até o final do clipe.
-4. **Volta para seleção**
+4. **Volta para seleção**  
    A aplicação retorna para a interface de seleção após o fim do clipe ou após o usuário encerrar a reprodução manualmente.
 
 ### Parâmetros dos clipes
